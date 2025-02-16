@@ -1,14 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class DetallesPage extends StatefulWidget {
-  @override
-  _DetallesPageState createState() => _DetallesPageState();
-}
-
-class _DetallesPageState extends State<DetallesPage> {
-  bool isFavorite = false;
-
+class DetallesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,13 +43,11 @@ class _DetallesPageState extends State<DetallesPage> {
                     backgroundColor: Colors.white,
                     child: IconButton(
                       icon: Icon(
-                        isFavorite ? Icons.favorite : Icons.favorite_border,
+                        Icons.favorite_border,
                         color: Colors.red,
                       ),
                       onPressed: () {
-                        setState(() {
-                          isFavorite = !isFavorite;
-                        });
+                        // Lógica para agregar a favoritos
                       },
                     ),
                   ),
@@ -69,7 +60,7 @@ class _DetallesPageState extends State<DetallesPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'New York Tour',
+                    'London Tour',
                     style: GoogleFonts.poppins(
                         fontSize: 24, fontWeight: FontWeight.bold),
                   ),
@@ -91,7 +82,7 @@ class _DetallesPageState extends State<DetallesPage> {
                   ),
                   SizedBox(height: 10),
                   Text(
-                    "New York City, often called the Big Apple, is known for its iconic landmarks such as the Statue of Liberty, Central Park, and Times Square. It's a vibrant city that never sleeps.",
+                    "London, the capital of England and the United Kingdom, is a city rich in history dating back to Roman times. It is home to iconic landmarks like the Houses of Parliament, Big Ben, and Westminster Abbey.",
                     style: GoogleFonts.poppins(
                         fontSize: 14, color: Colors.grey[700]),
                   ),
@@ -106,7 +97,7 @@ class _DetallesPageState extends State<DetallesPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          '\$1800.0',
+                          '\$1999',
                           style: GoogleFonts.poppins(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,

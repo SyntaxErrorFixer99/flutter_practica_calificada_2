@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'pages/portada_page.dart'; // Importa la página de portada
 import 'pages/catalogo_page.dart'; // Importa la página de catálogo
 import 'pages/detalles_page.dart'; // Importa la página de detalles
@@ -16,8 +17,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.orange, // Color primario naranja
         scaffoldBackgroundColor: Color(0xFFFDF5E6), // Fondo crema
-        appBarTheme: AppBarTheme(
-          backgroundColor: Colors.orange, // Color de la AppBar
+        textTheme: GoogleFonts.poppinsTextTheme(
+          Theme.of(context).textTheme,
         ),
       ),
       initialRoute: '/',

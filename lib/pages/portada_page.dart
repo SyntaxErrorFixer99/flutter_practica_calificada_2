@@ -9,7 +9,7 @@ class PortadaPage extends StatelessWidget {
         children: [
           Positioned.fill(
             child: Image.network(
-              'https://images.pexels.com/photos/2104151/pexels-photo-2104151.jpeg', // URL de Pexels
+              'https://images.pexels.com/photos/2104151/pexels-photo-2104151.jpeg',
               fit: BoxFit.cover,
             ),
           ),
@@ -25,7 +25,8 @@ class PortadaPage extends StatelessWidget {
               ),
             ),
           ),
-          Center(
+          Align(
+            alignment: Alignment.center,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -49,8 +50,7 @@ class PortadaPage extends StatelessWidget {
                 SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(
-                        context, '/catalogo'); // Navegar al catálogo
+                    Navigator.pushNamed(context, '/catalogo');
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue,
